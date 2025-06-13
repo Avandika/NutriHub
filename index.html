@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .logo-img{
+            width: 30%;
+            margin: 0px;
+        }
+        .menu-items{
+            display: flex;
+        }
+        .menu-items li{
+            margin-left: 40px;
+            color: rgb(255, 255, 255);
+            list-style: none;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .nav-bar{
+            display: flex;
+            background-color: goldenrod  ;
+            align-items: center;
+            height: 10vh;
+        }
+        body{
+            margin: 0px;
+        }
+        .banner-img{
+            width: 100%;
+            height: 90vh;
+        }
+        .about{
+            display: flex;
+            margin: 80px;
+            align-items: center;
+
+        }
+        .left-div video{
+            width: 500px;
+        }
+        .right-div{
+            margin-left: 80px;
+            font-size: larger;
+        }
+        .right-div li{
+            list-style: none;
+        }
+        .abt-features{
+            display: flex;
+        }
+        .abt-features li{
+            
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        i{
+            margin-bottom: 4px;
+            border-radius: 50%;
+            list-style: none;
+            background-color: #e4e71a;
+        }
+        .prd-left{
+            width: 60%;
+           border: 5px groove goldenrod;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+        }
+        .prd-right{
+            width: 40%;
+            border: 5px groove goldenrod;
+            padding-right: 10px;
+            
+        }
+        .product{
+            height: 100vh;
+            display: flex;
+            margin: 80px;
+        }
+        .prd-card{
+            width: 244px;
+            height: 200px;
+            margin-bottom: 10px;
+            margin: 10px;
+            border: 4px solid goldenrod;
+        }
+        .prd-img-div{
+            width: 100%;
+            height: 80%;
+            
+        }
+        .prd-img-div img{
+            width: 100%;
+            height: 100%;
+        }
+        .prd-left h3{
+            text-align: center;
+        }
+        .graph img{
+            width: 100%;
+            height: 100%;
+        }
+        .prd-detail{
+            margin-left: 30px;
+        }
+        .graph{
+            width: 100%;
+            height: 60vh;
+        }
+        .footer{
+            height: 60vh;
+            background-color: wheat;
+            display: flex;
+            margin: 80px;
+            border: 7px groove whitesmoke;
+        }
+        .fabout{
+            height: 100%;
+            text-align: center;
+            width: 25%;
+            margin: 10px;
+        }
+        .fabout p{
+            margin: 10px;
+            font-size: large
+        }
+        .fabt-ft{
+            height: 100%;
+            width: 25%;
+            margin: 10px;
+            text-align: center;    
+        }
+        .fabt-ft ul{
+            width: 33%;
+            font-size: 3ch;
+            margin-top: 40px;
+            margin-left: 64px;
+            list-style: none;
+        }
+        .service{
+            height: 100%;
+            width: 25%;
+            margin-left: 10px;
+            margin: 10px;
+        }
+        .service h3{
+            margin-top: 40px;
+        }
+        .contact{
+            width: 25%;
+            margin-left: 10px;
+            height:60vh ;
+            margin: 10px;
+        }
+        .contact h1{
+            text-align: center;
+        }
+        .contact form{
+            margin-top: 40px;
+            margin-left: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div>
+            <img class="logo-img" src="./image/logo.png">
+        </div>
+        <div>
+            <ul class="menu-items">
+                <li>Home</li>
+                <li>About</li>
+                <li>Products</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img class="banner-img" src="image/banner.jpg">
+    </div>
+
+    <div class="about">
+        <div class="left-div">
+            <video controls autoplay muted>
+                <source src="./image/abvideo.mp4">
+            </video>
+        </div>
+
+        <div class="right-div">
+            <h1>About us </h1>
+            <p>Nutrition is the biochemical and physiological process by which an organism uses food to support its life. It provides organisms with nutrients, which can be metabolized to create energy and chemical structures. Failure to obtain the required amount of nutrients causes malnutrition. Nutritional science is the study of nutrition, though it typically emphasizes human nutrition. </p>
+            <div class="abt-features">
+            <ul>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Meal planning</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Calore count</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Nutrition blog</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Goal tracking</li>
+            </ul>
+            <ul>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Meal planning</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Calore count</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Nutrition blog</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Goal tracking</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="product">
+        <div class="prd-left">
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img1.jpg">
+                </div>
+                <h3>Apple</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img2.jpg">
+                </div>
+                <h3>Orange</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img3.jpg">
+                </div>
+                <h3>Banana</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img4.jpg">
+                </div>
+                <h3>Pomegranate</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img5.jpg">
+                </div>
+                <h3>Watermelon</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img6.jpg">
+                </div>
+                <h3>Strawberry</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img7.jpeg">
+                </div>
+                <h3>Mango</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img8.jpg">
+                </div>
+                <h3>Grape</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img9.jpg">
+                </div>
+                <h3>Kiwi</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img10.jpg">
+                </div>
+                <h3>Broccoli</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img11.jpg">
+                </div>
+                <h3>Pineapple</h3>
+            </div>
+            <div class="prd-card">
+                <div class="prd-img-div">
+                    <img src="./image/img12.jpg">
+                </div>
+                <h3>Carrot</h3>
+            </div>
+        </div>
+        <div class="prd-right">
+            <div class="graph">
+                <img src="./image/graph.png">
+            </div>
+            <div class="prd-detail">
+                <h2>Product Details</h2>
+                <ul>
+                    <li>Protein</li>
+                    <li>Fat</li>
+                    <li>Carbohydrate</li>
+                    <li>Calorie</li>
+                    <li>Vitamin</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="fabout">
+            <h1>About</h1>
+            <p>The information provided on this website is intended for educational purposes only and is not a substitute for professional medical advice. Please consult with a registered dietitian, nutritionist, or healthcare provider for personalized dietary recommendations and guidance. Nutritional needs may vary based on individual health conditions, lifestyle, and other factors. Always prioritize a balanced approach to nutrition and wellness.</p>
+            <h2><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-square-instagram"></i> <i class="fa-brands fa-square-whatsapp"></i></h2>
+        </div>
+        <div class="fabt-ft">
+            <h1>Quick links</h1>
+            <ul>
+                <li><i class="fa-solid fa-caret-up fa-rotate-90"></i>  Home</li>
+                <li><i class="fa-solid fa-caret-up fa-rotate-90"></i>  About</li>
+                <li><i class="fa-solid fa-caret-up fa-rotate-90"></i>  Product</li>
+                <li><i class="fa-solid fa-caret-up fa-rotate-90"></i>  Services</li>
+            </ul>
+        </div>
+        <div class="service">
+            <h1>Get in touch</h1>
+            <h3><i class="fa-solid fa-location-dot"></i> Nutri-Hub  Kallanthod  Kozhikode  Kerala pin:673 601</h3>
+            <h3><i class="fa-solid fa-envelope"></i> nurihub123@gmail.com</h3>
+            <h3><i class="fa-solid fa-phone fa-shake"></i> +91-8527732632</h3>
+        </div>
+        <div class="contact">
+            <h1>Contact</h1>
+            <form>
+                <label>Name</label><br>
+                <input type="text"/><br>
+                <br>
+                <label>Ph.no</label><br>
+                <input type="text"/><br>
+                <br>
+                <label>Email</label><br>
+                <input type="text"/><br>
+                <br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

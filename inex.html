@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri_Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #f4f7f3; /* Light Beige background */
+            font-family: Arial, sans-serif;
+        }
+        .logo-img {
+            width: 20%;
+            margin: 15px;
+        }
+        .menu-items {
+            display: flex;
+        }
+        .menu-items li {
+            margin-left: 45px;
+            color: white;
+            list-style: none;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        .nav-bar {
+            background-color: #87B56A; /* Soft Green */
+            display: flex;
+            align-items: center;
+            height: 10vh;
+        }
+        .banner-img {
+            width: 100%;
+            height: 90vh;
+        }
+        .about{
+            display: flex;
+            margin: 80px;
+            align-items: center;
+
+        }
+        .left-div video{
+            width: 500px;
+        }
+        .right-div{
+            margin-left: 80px;
+            font-size: larger;
+        }
+        .right-div li{
+            list-style: none;
+        }
+        .abt-features{
+            display: flex;
+        }
+        .abt-features li{
+            
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .product {
+            display: flex;
+            height: 100vh;
+            background-color: #f4f7f3;
+            margin: 80px;
+            border: 5px groove goldenrod;
+        }
+        .prd-left {
+            width: 60%;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+            border-right: 5px groove goldenrod;
+        }
+        .prd-card {
+            width: 208px;  /* Reduced width */
+            height: 212px;  /* Reduced height */
+            margin: 10px;
+            border: 2px solid #8BC34A; /* Light Green Border */
+            text-align: center;
+            cursor: pointer;
+            background-color: #e8f5e9; /* Light Green background */
+            transition: background-color 0.3s ease-in-out;
+            box-sizing: border-box;
+        }
+        .prd-card:hover {
+            background-color: #C5E1A5; /* Darker Green on hover */
+        }
+        .prd-img-div {
+            width: 100%;
+            height: 100%;
+        }
+        .prd-img-div img {
+            width: 100%;  /* Reduced image size to 50% */
+            height: 100%;  /* Reduced image size to 50% */
+            
+        }
+        .prd-right {
+            width: 35%;
+            background-color: #FFF9C4; /* Light Pastel Yellow */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .prd-graph {
+            height: 60%;
+        }
+        .prd-detail {
+            margin-top: 20px;
+            color: black;
+            overflow-y: scroll;  /* Added scrollable property for overflow */
+            max-height: 400px;   /* Limit the height of the detail section */
+        }
+        .prd-detail ul {
+            list-style-type: none;
+        }
+        .prd-detail h2 {
+            color: #388E3C; /* Dark Green for the title */
+        }
+        .footer{
+            height: 63vh;
+            background-color: wheat;
+            display: flex;
+            margin: 80px;
+            border: 7px groove whitesmoke;
+        }
+        .fabout{
+            height: 98%;
+            text-align: center;
+            width: 25%;
+            overflow-y: scroll;
+            margin: 10px;
+        }
+        .fabout p{
+            margin: 30px;
+            font-size:large;
+        }
+        .fabt-ft{
+            height: 100%;
+            width: 25%;
+            margin: 10px;
+            text-align: center;    
+        }
+        .fabt-ft ul{
+            width: 33%;
+            font-size: 4vh;
+            margin-top: 40px;
+            margin-left: 64px;
+            list-style: none;
+        }
+        .service{
+            height: 100%;
+            width: 25%;
+            margin-left: 10px;
+            margin: 10px;
+        }
+        .service h3{
+            margin-top: 40px;
+        }
+        .contact{
+            width: 25%;
+            margin-left: 10px;
+            height:60vh ;
+            margin: 10px;
+        }
+        .contact h1{
+            text-align: center;
+        }
+        .contact form{
+            margin-top: 40px;
+            margin-left: 85px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div>
+            <img class="logo-img" src="./image/logo.png">
+        </div>
+        <div>
+            <ul class="menu-items">
+                <li>Home</li>
+                <li>About</li>
+                <li>Products</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img class="banner-img" src="./image/banner.jpg">
+    </div>
+
+    <div class="about">
+        <div class="left-div">
+            <video controls autoplay muted>
+                <source src="./image/abvideo.mp4">
+            </video>
+        </div>
+
+        <div class="right-div">
+            <h1>About us </h1>
+            <p>Nutrition is the biochemical and physiological process by which an organism uses food to support its life. It provides organisms with nutrients, which can be metabolized to create energy and chemical structures. Failure to obtain the required amount of nutrients causes malnutrition. Nutritional science is the study of nutrition, though it typically emphasizes human nutrition. </p>
+            <div class="abt-features">
+            <ul>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Meal planning</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Calore count</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Nutrition blog</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Goal tracking</li>
+            </ul>
+            <ul>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Meal planning</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Calore count</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Nutrition blog</li>
+                <li><i class="fa-solid fa-check" style="color: #398705;"></i>Goal tracking</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <div class="product">
+       <div class="prd-left" id="product-container">
+          <!-- Product Cards will be dynamically inserted here -->
+       </div>
+
+       <div class="prd-right">
+         <div class="prd-graph" id="chart-container">
+            <!-- Pie Chart will be displayed here -->
+         </div>
+         <div class="prd-detail" id="product-detail">
+            <!-- Nutritional details will be displayed here -->
+         </div>
+       </div>
+    </div>
+
+    <div class="footer">
+        <div class="fabout">
+            <h1>About</h1>
+            <p>The information provided on this website is intended for educational purposes only and is not a substitute for professional medical advice. Please consult with a registered dietitian, nutritionist, or healthcare provider for personalized dietary recommendations and guidance. Nutritional needs may vary based on individual health conditions, lifestyle, and other factors. Always prioritize a balanced approach to nutrition and wellness.</p>
+            <h2><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-square-instagram"></i> <i class="fa-brands fa-square-whatsapp"></i></h2>
+        </div>
+        <div class="fabt-ft">
+            <h1>Quick links</h1>
+            <ul>
+                <li><i class="fa-solid fa-caret-up fa-rotate-90"></i>  Home</li>
+                <li><i class="fa-solid fa-caret-up fa-rotate-90"></i>  About</li>
+                <li><i class="fa-solid fa-caret-up fa-rotate-90"></i>  Product</li>
+                <li><i class="fa-solid fa-caret-up fa-rotate-90"></i>  Services</li>
+            </ul>
+        </div>
+        <div class="service">
+            <h1>Get in touch</h1>
+            <h3><i class="fa-solid fa-location-dot"></i> Nutri-Hub  Kallanthod  Kozhikode  Kerala pin:673 601</h3>
+            <h3><i class="fa-solid fa-envelope"></i> nurihub123@gmail.com</h3>
+            <h3><i class="fa-solid fa-phone fa-shake"></i> +91-8527732632</h3>
+        </div>
+        <div class="contact">
+            <h1>Contact</h1>
+            <form>
+                <label>Name</label><br>
+                <input type="text"/><br>
+                <br>
+                <label>Ph.no</label><br>
+                <input type="text"/><br>
+                <br>
+                <label>Email</label><br>
+                <input type="text"/><br>
+                <br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Updated list of 30 products
+        const products = [
+            {
+                name: "Apple",
+                image: "./image/img1.jpg",
+                nutritional_values: {
+                    calories: 52,
+                    protein: 0.3,
+                    carbs: 14,
+                    fiber: 2.4,
+                    sugar: 10.4,
+                    fat: 0.2,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Orange",
+                image: "./image/img2.jpg",
+                nutritional_values: {
+                    calories: 89,
+                    protein: 1.1,
+                    carbs: 23,
+                    fiber: 2.6,
+                    sugar: 12.2,
+                    fat: 0.3,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Banana",
+                image: "./image/img3.jpg",
+                nutritional_values: {
+                    calories: 47,
+                    protein: 0.9,
+                    carbs: 12,
+                    fiber: 2.4,
+                    sugar: 9.4,
+                    fat: 0.1,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Pomegranate",
+                image: "./image/img4.jpg",
+                nutritional_values: {
+                    calories: 41,
+                    protein: 0.9,
+                    carbs: 10,
+                    fiber: 2.8,
+                    sugar: 4.7,
+                    fat: 0.2,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Watermelon",
+                image: "./image/img5.jpg",
+                nutritional_values: {
+                    calories: 55,
+                    protein: 3.7,
+                    carbs: 11.2,
+                    fiber: 3.8,
+                    sugar: 1.7,
+                    fat: 0.6,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Strawberry",
+                image: "./image/img6.jpg",
+                nutritional_values: {
+                    calories: 165,
+                    protein: 31,
+                    carbs: 0,
+                    fiber: 0,
+                    sugar: 0,
+                    fat: 3.6,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Mango",
+                image: "./image/img7.jpeg",
+                nutritional_values: {
+                    calories: 208,
+                    protein: 20,
+                    carbs: 0,
+                    fiber: 0,
+                    sugar: 0,
+                    fat: 13,
+                },
+                weight: "100g"
+            },
+           
+            {
+                name: "Grape",
+                image: "./image/img8.jpg",
+                nutritional_values: {
+                    calories: 49,
+                    protein: 4.3,
+                    carbs: 8.8,
+                    fiber: 2,
+                    sugar: 0.6,
+                    fat: 0.9,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Kiwi",
+                image: "./image/img9.jpg",
+                nutritional_values: {
+                    calories: 49,
+                    protein: 4.3,
+                    carbs: 8.8,
+                    fiber: 2,
+                    sugar: 0.6,
+                    fat: 0.9,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Brocolli",
+                image: "./image/img10.jpg",
+                nutritional_values: {
+                    calories: 49,
+                    protein: 4.3,
+                    carbs: 8.8,
+                    fiber: 2,
+                    sugar: 0.6,
+                    fat: 0.9,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Pineapple",
+                image: "./image/img11.jpg",
+                nutritional_values: {
+                    calories: 49,
+                    protein: 4.3,
+                    carbs: 8.8,
+                    fiber: 2,
+                    sugar: 0.6,
+                    fat: 0.9,
+                },
+                weight: "100g"
+            },
+            {
+                name: "Carrot",
+                image: "./image/img12.jpg",
+                nutritional_values: {
+                    calories: 30,
+                    protein: 5.3,
+                    carbs: 8.8,
+                    fiber: 2,
+                    sugar: 0.6,
+                    fat: 0.9,
+                },
+                weight: "100g"
+            }
+
+        ];
+
+        // Function to display products dynamically
+        function displayProducts() {
+            const productContainer = document.getElementById("product-container");
+            
+            for (let i = 0; i < products.length; i++) {
+                const product = products[i];
+                const productCard = document.createElement("div");
+                productCard.classList.add("prd-card");
+                productCard.setAttribute("data-index", i);
+                
+                const productImgDiv = document.createElement("div");
+                productImgDiv.classList.add("prd-img-div");
+                
+                const img = document.createElement("img");
+                img.src = product.image;
+                productImgDiv.appendChild(img);
+
+                const title = document.createElement("h3");
+                title.textContent = product.name;
+
+                productCard.appendChild(productImgDiv);
+                // productCard.appendChild(title);
+                productContainer.appendChild(productCard);
+                
+                // Add click event listener for each product card
+                productCard.onclick = function() {
+                    showProductDetails(i);  // Show the details of the clicked product
+                    showNutritionalChart(i); // Show the pie chart for the clicked product
+                };
+            }
+        }
+
+        // Function to show nutritional details of a product
+        function showProductDetails(index) {
+            const product = products[index];
+            const detailContainer = document.getElementById("product-detail");
+
+            detailContainer.innerHTML = `
+                <h2>${product.name} Nutritional Details</h2>
+                <ul>
+                    <li>Calories: ${product.nutritional_values.calories} kcal</li>
+                    <li>Protein: ${product.nutritional_values.protein} g</li>
+                    <li>Carbs: ${product.nutritional_values.carbs} g</li>
+                    <li>Fiber: ${product.nutritional_values.fiber} g</li>
+                    <li>Sugar: ${product.nutritional_values.sugar} g</li>
+                    <li>Fat: ${product.nutritional_values.fat} g</li>
+                    <li>Weight: ${product.weight}</li> <!-- Added weight here -->
+                </ul>
+            `;
+        }
+
+        // Function to show the pie chart for nutritional values
+        function showNutritionalChart(index) {
+            const product = products[index];
+            const chartContainer = document.getElementById("chart-container");
+            
+            chartContainer.innerHTML = "<canvas id='nutritionChart'></canvas>";  // Reset the chart container
+            const ctx = document.getElementById("nutritionChart").getContext("2d");
+
+            const chartData = {
+                labels: ["Calories", "Protein", "Carbs", "Fiber", "Sugar", "Fat"],
+                datasets: [{
+                    data: [
+                        product.nutritional_values.calories,
+                        product.nutritional_values.protein,
+                        product.nutritional_values.carbs,
+                        product.nutritional_values.fiber,
+                        product.nutritional_values.sugar,
+                        product.nutritional_values.fat
+                    ],
+                    backgroundColor: ["#FF6347", "#FFD700", "#98FB98", "#87CEEB", "#FF1493", "#8A2BE2"],
+                    hoverBackgroundColor: ["#FF4500", "#DAA520", "#32CD32", "#00BFFF", "#C71585", "#6A5ACD"]
+                }]
+            };
+
+            new Chart(ctx, {
+                type: "pie",
+                data: chartData,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: "bottom", // Moved legend to the bottom
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(tooltipItem) {
+                                    return tooltipItem.label + ": " + tooltipItem.raw + "g";
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize the page by displaying products
+        displayProducts();
+    </script>
+
+</body>
+</html>
